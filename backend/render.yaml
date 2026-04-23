@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mahendra-skillswap-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        value: https://mahendra-skillswap.vercel.app
